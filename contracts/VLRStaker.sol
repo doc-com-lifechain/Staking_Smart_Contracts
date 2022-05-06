@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: MIT License
 
 pragma solidity ^0.8.0;
 
@@ -159,6 +159,7 @@ contract VlrStaker is ERC20 {
             _stakedVlrAmount - burnFeePaid - charityFeePaid - mtcFeePaid
         );
         // _buyMtc(mtcFeePaid, msg.sender);
+        //Uncomment line above and delete line below after testing for final deployment
         vlrContract.transferFrom(msg.sender, burnAddress, mtcFeePaid);
     }
 

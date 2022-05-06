@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: MIT License
 // The EvlrStaker contract can be deployed for each enterprise token within the VLR
 // token ecosystem.  It mimics the functionality of the VLR staking contract, with two key
 // differences:
@@ -15,7 +15,6 @@ import "./SampleBEP20s/VlrContract.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./PancakeSwap/IPancakeRouter02.sol";
 
-
 contract EvlrStaker is ERC20 {
     ERC20 private eVlrContract;
     StakerBag[] private stakes;
@@ -28,7 +27,7 @@ contract EvlrStaker is ERC20 {
     uint256 private burnFee;
     uint256 private totalCharityCollected;
 
-    event RewardDistribution(uint date, uint totalDistributed);
+    event RewardDistribution(uint256 date, uint256 totalDistributed);
 
     constructor(
         string memory _tokenName,
